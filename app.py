@@ -3,7 +3,6 @@ import plotly.express as px
 import pandas as pd
 import os
 import warnings
-import google.generativeai as genai
 from google import genai
 import openai
 warnings.filterwarnings('ignore')
@@ -75,7 +74,7 @@ elif selected == "Visualize Data":
     metric_column = column_map[metric_type]
     if metric_column in filtered_df.columns:
         crop_yield_df = filtered_df.groupby(["Crops", "States"], as_index=False)[metric_column].sum()
-        st.subheader("Crop-wise "+column_map[metric_type]+" by State")
+        st.subheader("Crop-wise "+column_map[metric_type])
         fig = px.bar(
             crop_yield_df,
             x="Crops",
