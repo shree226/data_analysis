@@ -11,7 +11,7 @@ st.title("Analysis of Key Crop Trends in India (2020-2025)")
 #st.markdown('<style>div.block-container{background-color: #222222;}</style>',unsafe_allow_html=True)
 
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
-df = pd.read_csv("/workspaces/data_analysis/data/Gujarat_Crop_CLEANED.csv", encoding = "ISO-8859-1")
+df = pd.read_csv("data/Gujarat_Crop_CLEANED.csv", encoding = "ISO-8859-1")
 
 
 from streamlit_option_menu import option_menu
